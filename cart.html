@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for the shopping cart */
+    .container {
+      padding-top: 50px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Welcome to Smart Furniture Cart </h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="home.html">
+            <img src="img17.jpg" alt="Logo" width="50" height="50">
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link active" href="store.html">
+                        <i class="fas fa-store"></i> Store
+                    </a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link active" href="cart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="registration.html">
+                        <i class="fas fa-user-plus"></i> Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link active" href="feedback.html">
+                    <i class="fas fa-info-circle"></i> feedback
+                     </a>
+                </li>
+            </ul>
+
+            
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Shopping Cart</h2>
+                <ul id="cartItems" class="list-group">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+            <!-- Footer -->
+            <footer>
+                <p>© Copyright - Smart Furniture  2024, Site by S&C Group</p>
+    
+            </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to handle payment for an item
+        function payForItem(itemName) {
+            var confirmPay = window.confirm("Are you sure you want to buy this item?");
+            if (confirmPay) {
+                // Redirect to payment method page or perform payment process here
+                // For demonstration, we're redirecting to a hypothetical payment page
+                
+                window.location.href = "payment_method.html";
+            }
+        }
+    
+        // Function to delete an item from the cart
+        function deleteItem(itemName, listItem) {
+            var confirmDelete = window.confirm("Are you sure you want to delete this item from your cart?");
+            if (confirmDelete) {
+                // Remove item from the cart list
+                listItem.remove();
+                // Remove item from local storage
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                var index = cartItems.indexOf(itemName);
+                if (index !== -1) {
+                    cartItems.splice(index, 1);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                }
+                // Show success message
+                alert("Item successfully deleted from your cart.");
+            }
+        }
+    
+        // Retrieve items from local storage and display them in the cart
+        document.addEventListener("DOMContentLoaded", function() {
+            var cartItems = document.getElementById('cartItems');
+            var addedItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            addedItems.forEach(function(itemName) {
+                var li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.textContent = itemName;
+                // Create buttons for payment and deletion
+                var payButton = document.createElement('button');
+                payButton.classList.add('btn', 'btn-success', 'mr-2');
+                payButton.textContent = 'Pay';
+                payButton.onclick = function() {
+                    payForItem(itemName);
+                };
+                li.appendChild(payButton);
+                var deleteButton = document.createElement('button');
+                deleteButton.classList.add('btn', 'btn-danger');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = function() {
+                    deleteItem(itemName, li);
+                };
+                li.appendChild(deleteButton);
+                cartItems.appendChild(li);
+            });
+        });
+    </script>
+    
+    </body>
+</html>

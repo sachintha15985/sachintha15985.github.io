@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Method</title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    .payment-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="payment-form">
+        <h2>Payment Method</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" class="form-control" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="number" class="form-control" id="cvv" name="cvv" placeholder="Enter CVV" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cardHolderName">Cardholder Name:</label>
+                <input type="text" class="form-control" id="cardHolderName" name="cardHolderName" placeholder="Enter cardholder name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Payment</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#paymentForm').submit(function(e){
+            e.preventDefault();
+            // Here you can add your payment submission logic
+            // For demonstration purpose, showing an alert box
+            alert("Payment submitted successfully!");
+        });
+    });
+</script>
+
+</body>
+</html>

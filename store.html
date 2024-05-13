@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Store </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+        <style>
+            /* Center the video horizontally */
+            .video-container {
+              display: flex;
+              justify-content: center;
+            }
+            /* Make the video responsive to device width */
+            #videoPlayer {
+              width: 100vmax; /* Set width to 100% of viewport width */
+              height: auto;
+            }
+          </style>
+    </head>
+    <body class="Home">
+        <header>
+            <h1>Welcome to Smart Furniture Store </h1>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="img17.jpg" alt="Logo" width="50" height="50">
+                </a>
+        
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="store.html">
+                                <i class="fas fa-store"></i> Store
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cart.html">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registration.html">
+                                <i class="fas fa-user-plus"></i> Registration
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">
+                                <i class="fas fa-envelope"></i> Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">
+                                <i class="fas fa-info-circle"></i> About Us
+                            </a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="feedback.html">
+                            <i class="fas fa-info-circle"></i> feedback
+                        </a>
+                    </li>
+                    </ul>
+        
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="embed-responsive embed-responsive-16by9 video-container">
+                        <video id="videoPlayer" class="embed-responsive-item" autoplay muted controlsList="nodownload">
+                            <source src="v1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---Living Room Furniture-->
+        <div class="container">
+            <h2>Living Room Furniture</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img19.jpg" class="card-img-top" alt="Item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sofa</h5>
+                            <p class="card-text">A comfortable and stylish sofa for your living room.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Soft and plush cushions for comfort</li>
+                                <li>Durable fabric or leather upholstery</li>
+                                <li>Stylish design with contemporary aesthetics</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Customizable colors and materials available</li>
+                                <li>Expert delivery and assembly services</li>
+                                <li>Option for extended warranty coverage</li>
+                            </ul>
+                            <p class="card-text">Price: $500</p>
+                            <button class="btn btn-primary" onclick="addToCart('Sofa')">Add to Cart</button>
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img20.jpg" class="card-img-top" alt="Item 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffee Table</h5>
+                            <p class="card-text">A sturdy and elegant coffee table for your living room.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Solid wood construction for durability</li>
+                                <li>Sleek and minimalist design</li>
+                                <li>Ample surface area for placing drinks and snacks</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Custom sizing options to fit your space perfectly</li>
+                                <li>Easy-to-clean surface for maintenance convenience</li>
+                                <li>Eco-friendly materials used in production</li>
+                            </ul>
+                            <p class="card-text">Price: $250</p>
+                            <button class="btn btn-primary" onclick="addToCart('Coffee Table')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img21.jpg" class="card-img-top" alt="Item 3">
+                        <div class="card-body">
+                            <h5 class="card-title">TV Stand</h5>
+                            <p class="card-text">A modern and functional TV stand for your entertainment area.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Sturdy construction to support large TVs</li>
+                                <li>Ample storage space for media accessories</li>
+                                <li>Clean and contemporary design</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Adjustable shelves for customized storage</li>
+                                <li>Wire management system to keep cables organized</li>
+                                <li>Easy assembly with included instructions</li>
+                            </ul>
+                            <p class="card-text">Price: $350</p>
+                            <button class="btn btn-primary" onclick="addToCart('TV Stand')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img10.jpg" class="card-img-top" alt="Item 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Chair</h5>
+                            <p class="card-text">A comfortable chair for your study or office.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Ergonomic design for back support</li>
+                                <li>Adjustable height and armrests</li>
+                                <li>Durable and easy-to-clean upholstery</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Various color options available</li>
+                                <li>Quick assembly with included instructions</li>
+                                <li>Warranty coverage for manufacturing defects</li>
+                            </ul>
+                            <p class="card-text">Price: $150</p>
+                            <button class="btn btn-primary" onclick="addToCart('Chair')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img22.jpg" class="card-img-top" alt="Item 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Decorative Vase</h5>
+                            <p class="card-text">An elegant decorative vase to enhance your home decor.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Handcrafted with intricate details</li>
+                                <li>Available in various shapes and sizes</li>
+                                <li>Perfect for displaying flowers or as a standalone piece</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Options for different finishes and colors</li>
+                                <li>Secure packaging for safe delivery</li>
+                                <li>Return or exchange policy for damaged items</li>
+                            </ul>
+                            <p class="card-text">Price: $50</p>
+                            <button class="btn btn-primary" onclick="addToCart('Decorative Vase')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img23.jpg" class="card-img-top" alt="Item 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Wood Lamp</h5>
+                            <p class="card-text">A stylish wooden lamp to add warmth to your living space.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Natural wood base with a modern design</li>
+                                <li>Soft ambient lighting for a cozy atmosphere</li>
+                                <li>Compatible with energy-efficient LED bulbs</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Option for dimmable light settings</li>
+                                <li>Secure packaging to prevent damage during shipping</li>
+                                <li>Easy setup with included instructions</li>
+                            </ul>
+                            <p class="card-text">Price: $80</p>
+                            <button class="btn btn-primary" onclick="addToCart('Wood Lamp')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---kitchen-->
+
+        <div class="container">
+            <h2>Kitchen Furniture</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img24.jpg" class="card-img-top" alt="Kitchen Table">
+                        <div class="card-body">
+                            <h5 class="card-title"> kitchen table</h5>
+                            <p class="card-text">A functional and stylish kitchen table for dining and food preparation.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Durable construction for long-lasting use</li>
+                                <li>Ample surface area for meal preparation</li>
+                                <li>Option for adjustable height or expandable design</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of materials including wood, marble, or stainless steel</li>
+                                <li>Easy-to-clean surface for maintenance convenience</li>
+                                <li>Option for additional storage shelves or drawers</li>
+                            </ul>
+                            <p class="card-text">Price: $400</p>
+                            <button class="btn btn-primary" onclick="addToCart('Kitchen Table')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img25.jpg" class="card-img-top" alt="Chairs or Stools">
+                        <div class="card-body">
+                            <h5 class="card-title">Chairs or Stools</h5>
+                            <p class="card-text">Comfortable seating options for your kitchen.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Ergonomic design for maximum comfort</li>
+                                <li>Durable and easy-to-clean upholstery</li>
+                                <li>Option for adjustable height or swivel functionality</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of styles including modern, rustic, or industrial</li>
+                                <li>Option for set packages or individual pieces</li>
+                                <li>Option for cushions or padding for added comfort</li>
+                            </ul>
+                            <p class="card-text">Price: $100 per chair/stool</p>
+                            <button class="btn btn-primary" onclick="addToCart('Chairs or Stools')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img26.jpg" class="card-img-top" alt="Kitchen Hutch">
+                        <div class="card-body">
+                            <h5 class="card-title">Kitchen Hutch</h5>
+                            <p class="card-text">A versatile storage solution for your kitchen essentials.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Multiple shelves and compartments for organized storage</li>
+                                <li>Glass-fronted cabinets for displaying dinnerware</li>
+                                <li>Option for built-in wine rack or stemware storage</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Option for customizable finishes to match your kitchen decor</li>
+                                <li>Secure packaging for safe delivery</li>
+                                <li>Option for assembly service</li>
+                            </ul>
+                            <p class="card-text">Price: $600</p>
+                            <button class="btn btn-primary" onclick="addToCart('Kitchen Hutch')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img27.jpg" class="card-img-top" alt="Wine Rack or Wine Cabinet">
+                        <div class="card-body">
+                            <h5 class="card-title">Wine Rack or Wine Cabinet</h5>
+                            <p class="card-text">Elegant storage solutions for your wine collection.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Sturdy construction to hold multiple bottles</li>
+                                <li>Option for built-in wine glass storage</li>
+                                <li>Space-saving design for smaller kitchens</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of materials including wood, metal, or wrought iron</li>
+                                <li>Option for lockable cabinets for added security</li>
+                                <li>Option for integrated wine chilling or temperature control</li>
+                            </ul>
+                            <p class="card-text">Price: $250</p>
+                            <button class="btn btn-primary" onclick="addToCart('Wine Rack or Wine Cabinet')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img28.jpg" class="card-img-top" alt="Pantry Cabinet">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantry Cabinet</h5>
+                            <p class="card-text">Organize and store your kitchen essentials with ease.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Adjustable shelves for customizable storage options</li>
+                                <li>Option for built-in drawers or baskets for smaller items</li>
+                                <li>Space-saving design for compact kitchens</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of finishes including wood, laminate, or metal</li>
+                                <li>Option for integrated spice racks or door organizers</li>
+                                <li>Option for assembly service</li>
+                            </ul>
+                            <p class="card-text">Price: $350</p>
+                            <button class="btn btn-primary" onclick="addToCart('Pantry Cabinet')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img29.jpg" class="card-img-top" alt="Pot Rack">
+                        <div class="card-body">
+                            <h5 class="card-title">Pot Rack</h5>
+                            <p class="card-text">Efficiently store and display your pots and pans.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Sturdy hooks or shelves for hanging cookware</li>
+                                <li>Space-saving design for smaller kitchens</li>
+                                <li>Option for adjustable height or expandable design</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of materials including wrought iron, stainless steel, or wood</li>
+                                <li>Option for ceiling-mounted or wall-mounted installation</li>
+                                <li>Option for assembly service</li>
+                            </ul>
+                            <p class="card-text">Price: $120</p>
+                            <button class="btn btn-primary" onclick="addToCart('Pot Rack')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!---bed Room Furniture-->
+        <div class="container">
+            <h2>Bedroom Furniture</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img30.jpg" class="card-img-top" alt="Bed Frame">
+                        <div class="card-body">
+                            <h5 class="card-title">Bed Frame</h5>
+                            <p class="card-text">A sturdy and stylish bed frame for your bedroom.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Durable construction for long-lasting support</li>
+                                <li>Modern or traditional design options</li>
+                                <li>Option for storage drawers or built-in shelves</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of materials including wood, metal, or upholstered</li>
+                                <li>Option for various bed sizes (Twin, Full, Queen, King)</li>
+                                <li>Expert assembly services available</li>
+                            </ul>
+                            <p class="card-text">Price: $600</p>
+                            <button class="btn btn-primary" onclick="addToCart('Bed Frame')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img31.jpg" class="card-img-top" alt="Dresser">
+                        <div class="card-body">
+                            <h5 class="card-title">Dresser</h5>
+                            <p class="card-text">A spacious dresser for storing clothes and personal items.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Multiple drawers for organized storage</li>
+                                <li>Stylish and functional design</li>
+                                <li>Option for attached mirror</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of finishes to match your bedroom decor</li>
+                                <li>Option for additional jewelry trays or dividers</li>
+                                <li>Delivery and assembly services available</li>
+                            </ul>
+                            <p class="card-text">Price: $400</p>
+                            <button class="btn btn-primary" onclick="addToCart('Dresser')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img32.jpg" class="card-img-top" alt="Mirror">
+                        <div class="card-body">
+                            <h5 class="card-title">Mirror</h5>
+                            <p class="card-text">An essential mirror for grooming and getting ready.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Full-length or wall-mounted options</li>
+                                <li>Stylish frame design</li>
+                                <li>Option for adjustable angles or magnification</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Option for different shapes and sizes</li>
+                                <li>Secure packaging for safe delivery</li>
+                                <li>Easy installation with included hardware</li>
+                            </ul>
+                            <p class="card-text">Price: $150</p>
+                            <button class="btn btn-primary" onclick="addToCart('Mirror')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img33.jpg" class="card-img-top" alt="Bedside Lamps">
+                        <div class="card-body">
+                            <h5 class="card-title">Bedside Lamps</h5>
+                            <p class="card-text">Stylish lighting fixtures for your bedside.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Soft ambient lighting for a cozy atmosphere</li>
+                                <li>Modern or traditional lamp designs</li>
+                                <li>Option for adjustable brightness or dimmable settings</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of lampshade colors and materials</li>
+                                <li>Energy-efficient bulb options available</li>
+                                <li>Secure packaging for safe delivery</li>
+                            </ul>
+                            <p class="card-text">Price: $80 (per lamp)</p>
+                            <button class="btn btn-primary" onclick="addToCart('Bedside Lamps')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img34.jpg" class="card-img-top" alt="Mattress">
+                        <div class="card-body">
+                            <h5 class="card-title">Mattress</h5>
+                            <p class="card-text">A comfortable mattress for a good night's sleep.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Various sizes available (Twin, Full, Queen, King)</li>
+                                <li>Choice of firmness levels (Soft, Medium, Firm)</li>
+                                <li>Option for memory foam or innerspring construction</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Option for mattress protectors or covers</li>
+                                <li>Delivery and setup services available</li>
+                                <li>Extended warranty options</li>
+                            </ul>
+                            <p class="card-text">Price: $800</p>
+                            <button class="btn btn-primary" onclick="addToCart('Mattress')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img35.jpg" class="card-img-top" alt="Bookshelves">
+                        <div class="card-body">
+                            <h5 class="card-title">Bookshelves</h5>
+                            <p class="card-text">Functional storage units for books and decor items.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Adjustable shelves for customized storage</li>
+                                <li>Modern or rustic design options</li>
+                                <li>Option for open or closed-back bookshelves</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of finishes to match your bedroom decor</li>
+                                <li>Secure packaging for safe delivery</li>
+                                <li>Easy assembly with included instructions</li>
+                            </ul>
+                            <p class="card-text">Price: $250</p>
+                            <button class="btn btn-primary" onclick="addToCart('Bookshelves')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---office  Room Furniture-->
+        <div class="container">
+            <h2>Office Room Furniture</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img36.jpg" class="card-img-top" alt="Office Chair">
+                        <div class="card-body">
+                            <h5 class="card-title">Office Chair</h5>
+                            <p class="card-text">An ergonomic office chair for comfort and productivity.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Adjustable seat height and armrests</li>
+                                <li>Lumbar support for proper posture</li>
+                                <li>Durable upholstery for long-term use</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of materials and colors</li>
+                                <li>Swivel and tilt mechanism for flexibility</li>
+                                <li>Expert assembly services available</li>
+                            </ul>
+                            <p class="card-text">Price: $300</p>
+                            <button class="btn btn-primary" onclick="addToCart('Office Chair')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img37.jpg" class="card-img-top" alt="Filing Cabinet">
+                        <div class="card-body">
+                            <h5 class="card-title">Filing Cabinet</h5>
+                            <p class="card-text">A practical storage solution for documents and office supplies.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Multiple drawers for organization</li>
+                                <li>Locking mechanism for security</li>
+                                <li>Durable construction for longevity</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of sizes and configurations</li>
+                                <li>Option for mobile or stationary units</li>
+                                <li>Delivery and assembly services available</li>
+                            </ul>
+                            <p class="card-text">Price: $200</p>
+                            <button class="btn btn-primary" onclick="addToCart('Filing Cabinet')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img38.jpg" class="card-img-top" alt="Mirror">
+                        <div class="card-body">
+                            <h5 class="card-title">Mirror</h5>
+                            <p class="card-text">A sleek mirror for grooming and checking appearances.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Modern frameless design</li>
+                                <li>Wall-mounted for space-saving</li>
+                                <li>Clear reflection for accurate viewing</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Various sizes available</li>
+                                <li>Easy installation with included hardware</li>
+                                <li>Secure packaging for safe delivery</li>
+                            </ul>
+                            <p class="card-text">Price: $80</p>
+                            <button class="btn btn-primary" onclick="addToCart('Mirror')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img39.jpg" class="card-img-top" alt="Bookshelf">
+                        <div class="card-body">
+                            <h5 class="card-title">Bookshelf</h5>
+                            <p class="card-text">A functional bookshelf for organizing books and decorations.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Adjustable shelves for versatility</li>
+                                <li>Sturdy construction for heavy items</li>
+                                <li>Modern or classic design options</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of finishes to match your office decor</li>
+                                <li>Delivery and assembly services available</li>
+                                <li>Option for wall-mounted or freestanding units</li>
+                            </ul>
+                            <p class="card-text">Price: $150</p>
+                            <button class="btn btn-primary" onclick="addToCart('Bookshelf')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img40.jpg" class="card-img-top" alt="Conference Table">
+                        <div class="card-body">
+                            <h5 class="card-title">Conference Table</h5>
+                            <p class="card-text">A spacious table for meetings and collaborative work.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Durable surface for long-term use</li>
+                                <li>Modern design for professional settings</li>
+                                <li>Option for built-in power outlets or connectivity</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Various sizes available to accommodate different group sizes</li>
+                                <li>Delivery and assembly services available</li>
+                                <li>Option for customizable finishes</li>
+                            </ul>
+                            <p class="card-text">Price: $600</p>
+                            <button class="btn btn-primary" onclick="addToCart('Conference Table')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img41.jpg" class="card-img-top" alt="Office Sofa">
+                        <div class="card-body">
+                            <h5 class="card-title">Office Sofa</h5>
+                            <p class="card-text">A comfortable sofa for relaxation or informal meetings.</p>
+                            <p class="card-text">Features:</p>
+                            <ul>
+                                <li>Plush cushioning for comfort</li>
+                                <li>Stylish design for professional environments</li>
+                                <li>Option for fabric or leather upholstery</li>
+                            </ul>
+                            <p class="card-text">Facilities:</p>
+                            <ul>
+                                <li>Choice of colors and materials</li>
+                                <li>Delivery and assembly services available</li>
+                                <li>Option for modular configurations</li>
+                            </ul>
+                            <p class="card-text">Price: $400</p>
+                            <button class="btn btn-primary" onclick="addToCart('Office Sofa')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript to handle cart functionality -->
+        <script>
+            function addToCart(item) {
+                // Add your cart functionality here
+                alert('Adding ' + item + ' to cart!');
+            }
+        </script>
+         <!---style Furniture-->
+         <style>
+            /* Style for the card images */
+            .card-img-top {
+                height: 250px; /* Set the height of the images */
+                object-fit: cover; /* Ensure images cover the entire space */
+            }
+        
+            /* Style for the card titles */
+            .card-title {
+                color: #333; /* Set the color of the title */
+                font-size: 1.25rem; /* Increase the font size */
+                margin-bottom: 10px; /* Add some bottom margin */
+            }
+        
+            /* Style for the card body */
+            .card-body {
+                padding: 20px; /* Add padding to the card body */
+            }
+        
+            /* Style for the card text */
+            .card-text {
+                color: #666; /* Set the color of the text */
+            }
+        
+            /* Style for the add to cart button */
+            .btn-primary {
+                background-color: #007bff; /* Set the background color */
+                border-color: #007bff; /* Set the border color */
+            }
+        
+            .btn-primary:hover {
+                background-color: #0056b3; /* Change the background color on hover */
+                border-color: #0056b3; /* Change the border color on hover */
+            }
+        </style>
+        <style>
+            /* Style for the card images */
+            .card-img-top {
+                height: 250px; /* Set the height of the images */
+                object-fit: cover; /* Ensure images cover the entire space */
+            }
+        
+            /* Style for the card titles */
+            .card-title {
+                color: #333; /* Set the color of the title */
+                font-size: 1.25rem; /* Increase the font size */
+                margin-bottom: 10px; /* Add some bottom margin */
+            }
+        
+            /* Style for the card body */
+            .card-body {
+                padding: 20px; /* Add padding to the card body */
+            }
+        
+            /* Style for the card text */
+            .card-text {
+                color: #666; /* Set the color of the text */
+            }
+        
+            /* Style for the add to cart button */
+            .btn-primary {
+                background-color: #114379; /* Set the background color */
+                border-color: #739ecc91; /* Set the border color */
+            }
+        
+            .btn-primary:hover {
+                background-color: #053364; /* Change the background color on hover */
+                border-color: #0056b3; /* Change the border color on hover */
+            }
+        
+            /* Custom background color for the container */
+            .container {
+                background-color: #f8f9fa; /* Set the background color */
+                padding: 30px 0; /* Add some padding to the top and bottom */
+            }
+        </style>
+        
+        <!-- Button to trigger the modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
+            Open Shopping Cart
+        </button>
+        
+        <!-- Shopping cart modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="cartItems" class="list-group">
+                            <!-- Cart items will be dynamically added here -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="checkoutButton">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                <!-- Footer -->
+                <footer>
+                    <p>© Copyright - Smart Furniture  2024, Site by S&C Group</p>
+        
+                </footer>
+        
+
+        <script>
+            // Function to add items to the shopping cart
+            function addToCart(itemName) {
+                // Prompt the user for confirmation
+                var confirmAdd = window.confirm("Are you sure you want to add this item to your cart?");
+                
+                // If the user confirms, add the item to the cart
+                if (confirmAdd) {
+                    // Store added items in local storage
+                    var addedItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    addedItems.push(itemName);
+                    localStorage.setItem('cartItems', JSON.stringify(addedItems));
+        
+                    // Show modal
+                    $('#cartModal').modal('show');
+                }
+            }
+        
+            // Function to display items in the cart from local storage
+            function displayCart() {
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                var cartList = document.getElementById('cartItems');
+        
+                // Clear previous contents
+                cartList.innerHTML = '';
+        
+                // Add items to the list
+                cartItems.forEach(function(item) {
+                    var li = document.createElement('li');
+                    li.classList.add('list-group-item');
+                    li.innerText = item;
+                    cartList.appendChild(li);
+                });
+            }
+        
+            // Call displayCart function when the page loads
+            window.addEventListener('load', displayCart);
+        
+            // Redirect to cart.html when checkout button is clicked
+            document.getElementById("checkoutButton").addEventListener("click", function() {
+                window.location.href = "cart.html";
+            });
+        </script>
+    
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

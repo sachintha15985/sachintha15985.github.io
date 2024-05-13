@@ -1,0 +1,308 @@
+/* Reset default browser styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header styles */
+header {
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Adjust margin between logo and text */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #333; /* Change link color */
+    margin-left: 20px; /* Adjust spacing between links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #555; /* Change link color on hover */
+}
+
+/* Custom CSS to adjust the navigation bar */
+.form-inline input[type="search"] {
+    width: 200px; /* Adjust search input width */
+    margin-right: 10px; /* Adjust margin between input and button */
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #08a9df, #12054a);
+    border: 0px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Hover effect on navbar links */
+.navbar-nav .nav-link:hover {
+    color: #555; /* Change link color on hover */
+    background-color: #f8f9fa; /* Change background color on hover */
+}
+
+/* Active page styling */
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff; /* Change active link color */
+    background-color: #007bff; /* Change active link background color */
+}
+
+/* Active page styling for hover state */
+.navbar-nav .nav-item.active .nav-link:hover {
+    background-color: #0056b3; /* Change active link background color on hover */
+}
+
+/* Set container dimensions */
+section {
+    width: 1530px;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Style for each image container */
+.image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+.container {
+    max-width: 100%; /* Set maximum width to device screen width */
+}
+/* Style for the image */
+.mySlide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style for the image text container */
+.image-text {
+    position: absolute;
+    bottom: 100px; /* Adjust as needed */
+    left: 100px; /* Adjust as needed */
+    color: #fff;
+    display: block;
+    background-color: black;
+    padding: 10px;
+}
+
+/* Style for "Your palace of furniture Sri Lanka" */
+.image-text p {
+    font-size: 15px;
+}
+
+/* Style for "The Smart Furniture" */
+.image-text h2 {
+    font-size: 35px;
+}
+
+/* Style for the date-time box */
+.date-time {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.content {
+    color: white;
+    background-color: gray;
+    text-align: center;
+    padding: 50px;
+    max-width: 1430px;
+    max-height: 300px;
+    margin-right: 50px;
+}
+.Topic {
+    font-size: 35px;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+}
+.p{
+    color: black;
+    text-align: center;
+    margin: 10px;
+}
+.project {
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    margin: 10px;
+}
+.projects {
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Adjust the value to reduce the space */
+}
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-with-text {
+    position: absolute;
+}
+
+.image-with-text img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 200px; /* Allow the height to adjust based on content */
+    object-fit: cover; 
+}
+.image-wrapper {
+    flex-basis: calc(25% - 20px); /* Each image wrapper takes up 25% of the width minus margin */
+    height: 280px; /* Set a fixed height for the image wrapper */
+    width: 1500px;
+    position: relative; /* Position images relative to their wrapper */
+    display: inline-block;
+    padding: 20px;
+    opacity: 0; /* Initially hide images */
+    transform: translateX(100%); /* Move images down initially */
+    transition: opacity 2s ease,transform s ease; /* Add transition for smooth animation */
+    margin-right: 20px; /* Adjust the value to add space between images */
+}
+.image-wrapper.show {
+    opacity: 1; /* Show images when scrolled into view */
+    transform: translateX(0); /* Move images up */
+}
+.image-wrapper img {
+    width: 100%; /* Make images responsive */
+    height: 180px; /* Ensure images fill the entire height of the wrapper */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire wrapper */
+}
+.text {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+.Topic {
+    font-size: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+}
+.Smart {
+    color: black;
+    max-width: 1100px;
+    max-height: 450px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+    background-color: lightgrey;
+    margin-top: 50px;
+    margin-bottom: 0;  
+}
+.p1 {
+    font-size: medium;
+}
+.image {
+    width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding: 50px;
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding to the content */
+    margin-bottom: 0;
+}
+.pic {
+    width: 450px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding: 50px;
+}
+/*last lines*/
+.content, .Smart, .staff {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+.staff {
+    text-align: center;
+}
+
+.topic {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: black;
+    padding-left: 50px;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.staff1 {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.staff1 p {
+    font-weight: bold;
+    color: black;
+}
+
+.staff1 img {
+    border-radius: 100%;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    position:relative; /* Change to absolute or relative */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Take up full width */
+    font-size:12px;
+    padding: 2px;
+    color: white; /* Set text color to contrast with background */
+}
